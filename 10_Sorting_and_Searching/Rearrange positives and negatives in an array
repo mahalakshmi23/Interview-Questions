@@ -3,3 +3,35 @@ Given an array containing both positive and negative numbers, sort the array in 
 Example:
 input : {-4,-8,1,11,-6,7,5,-2,1,6}
 output : {-4 ,-8, -6, -2, 1, 11, 7, 5, 1, 6}
+
+
+SOLUTION:
+
+Use insertion sort.
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int[] input=new int[]{-4,-8,1,11,-6,7,5,-2,1,6};
+		int count=input.length;
+		
+		for(int i=0;i<count-1;i++){
+			
+			int j=i+1;
+			int currElement=input[j];
+			
+			if(input[j]<0 && input[j-1]>0){
+				
+				while(j>=0 && input[j-1]>0){
+					input[j]=input[j-1];
+					j--;
+				}
+			}
+			input[j]=currElement;
+		}
+		
+		for(int i=0;i<count;i++)
+			System.out.print(input[i]+" ");
+	}
+}
