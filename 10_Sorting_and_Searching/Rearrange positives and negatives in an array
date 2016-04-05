@@ -1,0 +1,5 @@
+Given an array containing both positive and negative numbers, sort the array in such a way that the negatives are moved to the front of the array and the positives are moved to the end of the array. Also maintain the order of the numbers. 
+
+Example:
+input : {-4,-8,1,11,-6,7,5,-2,1,6}
+output : {-4 ,-8, -6, -2, 1, 11, 7, 5, 1, 6}
